@@ -566,8 +566,7 @@ ZXAV(didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer)
   }
 
   if (binary || delegate) {
-    ZXHybridBinarizer *binarizer = [ZXHybridBinarizer alloc];
-    [binarizer initWithSource:source] ;
+    ZXHybridBinarizer *binarizer = [[ZXHybridBinarizer alloc] initWithSource:source] ;
 
     if (binary) {
       CGImageRef image = binarizer.newImage;
